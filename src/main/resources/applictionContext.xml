@@ -3,9 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用import引入其他配置文件
+        spring提供了俩个前缀标示符:file/classpath
+        file：代表文件系统
+        classpath：从classpath开始寻找文件
 
 
-    <bean id="helloService" class="com.spring.service.Impl.HelloServiceImpl"/>
+    -->
+    <import resource="classpath:/test-appliction/applictionContext-test.xml" />
+    <bean id="helloService" name="Hello" class="com.spring.service.Impl.HelloServiceImpl"/>
 
 
 

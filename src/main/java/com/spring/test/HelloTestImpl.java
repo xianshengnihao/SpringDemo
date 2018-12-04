@@ -1,8 +1,7 @@
-package com.springdemo.test.Impl;
+package com.spring.test;
 
 import com.spring.service.IHelloService;
 import com.spring.service.Impl.HelloServiceImpl;
-import com.springdemo.test.IHelloTest;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -10,7 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 
-public class HelloTestImpl implements IHelloTest {
+public class HelloTestImpl {
 
 
     @Test
