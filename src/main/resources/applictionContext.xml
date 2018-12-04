@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="helloService" name="Hello" class="com.spring.service.Impl.HelloServiceImpl"/>
+    <bean id="helloService" class="com.spring.service.Impl.HelloServiceImpl"/>
 
 
 
