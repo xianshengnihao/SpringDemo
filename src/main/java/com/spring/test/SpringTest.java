@@ -21,6 +21,7 @@ public class SpringTest {
         HelloTestImpl helloTest = beanFactory.getBean("test", HelloTestImpl.class);
         helloTest.HelloTest();
         IHelloService helloService = (IHelloService) beanFactory.getBean("Hello");
-//       helloService.sayHi();
+        System.out.println(helloService);
+//      helloService.sayHi();
     }
 }

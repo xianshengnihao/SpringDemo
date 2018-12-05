@@ -11,7 +11,11 @@
 
     -->
     <import resource="classpath:/test-appliction/applictionContext-test.xml" />
+    <import resource="classpath:/test-appliction/ScopeContext-test.xml" />
+
     <bean id="helloService" name="Hello" class="com.spring.service.Impl.HelloServiceImpl"/>
+    <bean id="Somebean" class="com.spring.test.Somebean"/>
+
 
 
 
