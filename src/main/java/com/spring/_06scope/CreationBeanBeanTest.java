@@ -35,7 +35,7 @@ public class CreationBeanBeanTest {
         CreationBean creationBean3 = ctx.getBean("getCreation2",CreationBean.class);
         System.out.println(creationBean3);
         /**
-         * 通过是想FactoryBean接口创建Creation
+         * 通过实现FactoryBean接口创建Creation
          */
         CreationBean creationBean4 = ctx.getBean("creationBean4",CreationBean.class);
         System.out.println(creationBean4);
