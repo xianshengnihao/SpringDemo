@@ -7,8 +7,6 @@
         spring提供了俩个前缀标示符:file/classpath
         file：代表文件系统
         classpath：从classpath开始寻找文件
-
-
     -->
     <import resource="classpath:/test-appliction/applictionContext-test.xml" />
     <import resource="classpath:/test-appliction/ScopeContext-test.xml" />
