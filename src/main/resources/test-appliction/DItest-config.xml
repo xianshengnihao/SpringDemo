@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="otherbean" class="com.spring._08DI.OtherBean"/>
+    <bean id="someBean" class="com.spring._08DI.SomeBean">
+        <!--简单类型的依赖注入-->
+        <property name="value" value="value被注入进来"></property>
+        <property name="number" value="0000000"></property>
+        <property name="url" value="http://www.baidu.com"></property>
+        <!--注入另外一个bean 只需要用ref引入需要注入的bean的ID即可-->
+        <property name="otherBean" ref="otherbean"/>
+        <!--注入集合 ref引入的bean的ID并非只引入于当前xml 凡是被ApplictionContext.xml文件import的配置文件中的bean的ID都和直接引用
+
+        -->
+        <property name="list">
+            <list>
+                <value>1111</value>
+                <value>222</value>
+                <ref bean="otherbean"></ref>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>AAA</value>
+                <value>BBB</value>
+                <ref bean="scopeBean"/>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="key1" value="map1"/>
+                <entry key="key2" value="map2"/>
+                <!--<entry key-ref="otherbean" value="haha"/>-->
+                <entry key-ref="otherbean" value-ref="otherbean"/>
+                <entry key="otherbean地址:" value-ref="otherbean"/>
+            </map>
+        </property>
+    </bean>
+</beans>

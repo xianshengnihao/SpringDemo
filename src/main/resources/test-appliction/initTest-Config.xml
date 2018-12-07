@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--init-method：告诉spring  bean对象的初始化方法名称，初始化方法不能有参数
+            bean需要在spring实例化完成之后需要去调用bean上面的一个初始化方法来完成bean的初始化工作;
+            destroy-method：告诉spring bean对象销毁方法名称，销毁方法不能有参数
+            需要在spring正常销毁之前,调用一个结束方法(销毁方法)去完成一些清理工作;
+        -->
+        <bean id="someBean" class="com.spring._07initanddestory.Somebean" init-method="init"
+              destroy-method="destory" scope="prototype"/>
+
+
+</beans>

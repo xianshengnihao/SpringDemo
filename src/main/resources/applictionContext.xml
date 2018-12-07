@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+            http://www.springframework.org/schema/beans/spring-beans.xsd"
+
+
+>
     <!--使用import引入其他配置文件
         spring提供了俩个前缀标示符:file/classpath
         file：代表文件系统
@@ -10,6 +14,9 @@
     -->
     <import resource="classpath:/test-appliction/applictionContext-test.xml" />
     <!--<import resource="file:com/spring/test/applictionContext-test2.xml"/>-->
+    <!--init 和 destory-->
+    <import resource="classpath:/test-appliction/initTest-Config.xml"/>
+    <import resource="classpath:test-appliction/DItest-config.xml"/>
     <bean id="helloService" name="Hello" class="com.spring.service.Impl.HelloServiceImpl"/>
     <bean id="Somebean" class="com.spring.test.Somebean"/>
 

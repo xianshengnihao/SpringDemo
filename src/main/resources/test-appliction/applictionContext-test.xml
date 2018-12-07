@@ -23,9 +23,9 @@
     2、通过实例工厂的bean对象（factory-bean）和实例工厂中的普通方法（factory-method=）创建beean对象
     -->
     <bean id="creationBeanFactory" class="com.spring._06scope.CreationBeanFactory"/>
-    <bean id="getCreation2" class="com.spring._06scope.CreationBean" factory-bean="creationBeanFactory" factory-method="getCreation2"/>
+    <bean id="creationBean3" class="com.spring._06scope.CreationBean" factory-bean="creationBeanFactory" factory-method="getCreation2"/>
 
     <!--通过实现FactorBean接口创建对象-->
-    <bean id="creationBean4" class="com.spring._06scope.CreationFactoryBean"/>
+    <bean id="creationFactoryBean" class="com.spring._06scope.CreationFactoryBean"/>
 
 </beans>

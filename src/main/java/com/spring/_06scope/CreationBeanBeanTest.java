@@ -32,12 +32,12 @@ public class CreationBeanBeanTest {
         /**
          * 通过CreationBeanFactory中的普通方法getCreation2()创建Creation对象
          */
-        CreationBean creationBean3 = ctx.getBean("getCreation2",CreationBean.class);
+        CreationBean creationBean3 = ctx.getBean("creationBean3",CreationBean.class);
         System.out.println(creationBean3);
         /**
          * 通过实现FactoryBean接口创建Creation
          */
-        CreationBean creationBean4 = ctx.getBean("creationBean4",CreationBean.class);
+        CreationBean creationBean4 = ctx.getBean("creationFactoryBean",CreationBean.class);
         System.out.println(creationBean4);
 
 
