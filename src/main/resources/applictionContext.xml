@@ -16,8 +16,13 @@
     <!--<import resource="file:com/spring/test/applictionContext-test2.xml"/>-->
     <!--init 和 destory-->
     <import resource="classpath:/test-appliction/initTest-Config.xml"/>
+    <!--setter注入-->
     <import resource="classpath:test-appliction/DItest-config.xml"/>
+    <!--构造器注入-->
     <import resource="classpath:test-appliction/constructorsTest-Config.xml"/>
+    <!--完整的示例-->
+    <import resource="classpath:/test-appliction/exampleContext-test.xml"/>
+
     <bean id="helloService" name="Hello" class="com.spring.service.Impl.HelloServiceImpl"/>
     <bean id="Somebean1" class="com.spring.test.Somebean"/>
 

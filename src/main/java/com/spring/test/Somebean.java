@@ -18,7 +18,7 @@ public class Somebean {
     /**
      * 通过ApplictionContext容器手动启动，并且从中获取一个bean
      */
-//    @Test
+//    @_10exampleTest
 //    public void test(){
 //        ApplicationContext ctx = new ClassPathXmlApplicationContext("applictionContext.xml");
 //        Somebean somebean = ctx.getBean("Somebean",Somebean.class);
