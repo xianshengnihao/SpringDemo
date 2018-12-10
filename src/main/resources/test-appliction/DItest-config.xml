@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="otherbean" class="com.spring._08DI.OtherBean"/>
+
     <bean id="someBean" class="com.spring._08DI.SomeBean">
         <!--简单类型的依赖注入-->
         <property name="value" value="value被注入进来"></property>
