@@ -20,7 +20,7 @@ public class ScopeBeanTest {
      * spring中的bean创建是默认为单例的，既同一个对象只创建一次。bean的配置scope默认为scope="singleton"
      * singleton：既同一个对象只创建一次
      * prototype: 既每次getBean同一个Bean都会创建一个不同的实例，用一次对象创建一次
-     * 在web环境中，持久层和业务层的对象对象一般都是单例的，既同一个对象只创建一次
+     * 在web环境中，持久层(dao)和业务层(service)的对象对象一般都是单例的，既同一个对象只创建一次
      */
     @Test
     public void testScope(){

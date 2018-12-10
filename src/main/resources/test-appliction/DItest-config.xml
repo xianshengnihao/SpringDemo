@@ -4,16 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="otherbean" class="com.spring._08DI.OtherBean"/>
-
-    <bean id="someBean" class="com.spring._08DI.SomeBean">
+    <!--Setter方式注入-->
+    <bean id="someBean3" class="com.spring._08DI.SomeBean">
         <!--简单类型的依赖注入-->
         <property name="value" value="value被注入进来"></property>
         <property name="number" value="0000000"></property>
         <property name="url" value="http://www.baidu.com"></property>
         <!--注入另外一个bean 只需要用ref引入需要注入的bean的ID即可-->
         <property name="otherBean" ref="otherbean"/>
-        <!--注入集合 ref引入的bean的ID并非只引入于当前xml 凡是被ApplictionContext.xml文件import的配置文件中的bean的ID都和直接引用
-
+        <!--注入集合 ref引入的bean的ID并非只引入于当前xml 凡是被ApplictionContext.xml文件import的配置文件中的bean的ID都可直接引用
         -->
         <property name="list">
             <list>

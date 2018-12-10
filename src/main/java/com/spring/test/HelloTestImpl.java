@@ -20,12 +20,12 @@ public class HelloTestImpl {
 
     }
     /**
-     * 从beanFactory中拿bean的三种方式
+     * 从beanFactory中拿bean的四种方式
      * 1、通过id取bean  getBean(id);
      * 2、通过name取bean    getBean(name);
      * 3、通过接口名拿bean     需要spring容器中bean类型唯一
      * 4、通过那么和接口拿bean   getBean(String name,Class Type)
-     * 在配置文件中id和name，ID唯一 name可以有小名，一般使用ID
+     * 在配置文件中id和name，ID唯一 name可以有别名，一般使用ID
      * bean只对象
      */
     @Test

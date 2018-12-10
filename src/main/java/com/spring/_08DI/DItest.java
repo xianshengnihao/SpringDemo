@@ -17,7 +17,7 @@ public class DItest {
     private ApplicationContext ctx;
     @Test
     public void test(){
-        SomeBean somebean = ctx.getBean("someBean",SomeBean.class);
+        SomeBean somebean = ctx.getBean("someBean3",SomeBean.class);
         System.out.println(somebean);
 
     }

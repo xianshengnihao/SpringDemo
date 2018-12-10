@@ -8,7 +8,7 @@
             destroy-method：告诉spring bean对象销毁方法名称，销毁方法不能有参数
             需要在spring正常销毁之前,调用一个结束方法(销毁方法)去完成一些清理工作;
         -->
-        <bean id="someBean" class="com.spring._07initanddestory.Somebean" init-method="init"
+        <bean id="someBean2" class="com.spring._07initanddestory.Somebean" init-method="init"
               destroy-method="destory" scope="prototype"/>
 
 

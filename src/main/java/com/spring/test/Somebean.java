@@ -39,8 +39,8 @@ public class Somebean {
     private ApplicationContext ctx;
     @Test
     public void test2(){
-        Somebean somebean = ctx.getBean("Somebean",Somebean.class);
-        Somebean somebean1 = beanFactory.getBean("Somebean",Somebean.class);
+        Somebean somebean = ctx.getBean("Somebean1",Somebean.class);
+        Somebean somebean1 = beanFactory.getBean("Somebean1",Somebean.class);
         System.out.println(somebean);
         System.out.println(somebean1);
         System.out.println(ctx.getClass().getName());

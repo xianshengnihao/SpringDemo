@@ -1,4 +1,4 @@
-package com.spring._07initanddestory;
+package com.spring._09constructors;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,19 +7,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-/**
- * bean的初始换和销毁
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applictionContext.xml")
-public class SomebeanTest {
+public class BeanTest {
+
     @Autowired
-    private ApplicationContext ctx;
+    ApplicationContext ctx;
+
+    /**
+     * 构造器注入
+     */
     @Test
     public void test(){
-        Somebean somebean = ctx.getBean("someBean2",Somebean.class);
-        somebean.sayhi();
+        ConstructorsBean constructorsBean = ctx.getBean("someBean4",ConstructorsBean.class);
+        System.out.println(constructorsBean);
     }
-
-
 }
