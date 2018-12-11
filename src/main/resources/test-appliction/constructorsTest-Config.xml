@@ -6,13 +6,13 @@
 
 
         <!--通过构造器注入-->
-        <bean id="someBean4" class="com.spring._09constructors.ConstructorsBean">
+        <bean id="someBean4" class="com.spring_01._09constructors.ConstructorsBean">
 
 
                 <constructor-arg index="0" value="郝维格"/>
                 <constructor-arg index="1" ref="otherBean2"/>
                 <constructor-arg index="2" value="123456"/>
         </bean>
-        <bean id="otherBean2" class="com.spring._09constructors.Otherbean"/>
+        <bean id="otherBean2" class="com.spring_01._09constructors.Otherbean"/>
 
 </beans>

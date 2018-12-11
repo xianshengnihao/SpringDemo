@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="otherbean" class="com.spring._08DI.OtherBean"/>
+    <bean id="otherbean" class="com.spring_01._08DI.OtherBean"/>
     <!--Setter方式注入-->
-    <bean id="someBean3" class="com.spring._08DI.SomeBean">
+    <bean id="someBean3" class="com.spring_01._08DI.SomeBean">
         <!--简单类型的依赖注入-->
         <property name="value" value="value被注入进来"></property>
         <property name="number" value="0000000"></property>
