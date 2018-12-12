@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启针对autowire/resource注解的解析
+        在spring3.0之后spring会自动开启其解析，但是在web环境下要使用该注解仍然需要手动开启
+        手动开心需加入的命名空间为：
+        xmlns:context="http://www.springframework.org/schema/context"
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    -->
+    <context:annotation-config/>
+        <bean class="com.spring_02._01annIocDI.FooBean"/>
+        <bean  class="com.spring_02._01annIocDI.OtherBean"/>
+        <bean  class="com.spring_02._01annIocDI.SomeBean"/>
+
+</beans>

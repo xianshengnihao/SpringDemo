@@ -2,32 +2,12 @@
 
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
+
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-            http://www.springframework.org/schema/beans/spring-beans.xsd"
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+">
 
-
->
-    <!--使用import引入其他配置文件
-        spring提供了俩个前缀标示符:file/classpath
-        file：代表文件系统
-        classpath：从classpath开始寻找文件既resources包下
-    -->
-    <import resource="classpath:/test-appliction/applictionContext-test.xml"/>
-    <!--<import resource="file:com/spring_01/test/applictionContext-test2.xml"/>-->
-    <!--init 和 destory-->
-    <import resource="classpath:/test-appliction/initTest-Config.xml"/>
-    <!--setter注入-->
-    <import resource="classpath:test-appliction/DItest-config.xml"/>
-    <!--构造器注入-->
-    <import resource="classpath:test-appliction/constructorsTest-Config.xml"/>
-    <!--完整的示例-->
-    <import resource="classpath:/test-appliction/exampleContext-test.xml"/>
-
-    <bean id="helloService" name="Hello" class="com.spring_01.service.Impl.HelloServiceImpl"/>
-    <bean id="Somebean1" class="com.spring_01.test.Somebean"/>
-
-
-
+        <import resource="classpath:/day2_appliction/Anntext-config.xml"/>
 
 
 </beans>
