@@ -4,10 +4,10 @@
        xmlns="http://www.springframework.org/schema/beans"
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
-">
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
         <import resource="classpath:/day2_appliction/Anntext-config.xml"/>
-
+        <import resource="classpath:/day2_appliction/IOC-config.xml"/>
+        <import resource="classpath:/day2_appliction/03_example-config.xml"/>
 
 </beans>

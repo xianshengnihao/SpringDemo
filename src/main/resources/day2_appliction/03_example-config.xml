@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--context需加入的命名空间为：
+        xmlns:context="http://www.springframework.org/schema/context"
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">\
+    -->
+
+    <!--1、context:annotation-config:开启针对autowire/resource注解的解析
+        在spring3.0之后spring会自动开启其解析，但是在web环境下要使用该注解仍然需要手动开启
+        2、context:component-scan：开启注解扫描
+    -->
+    <context:annotation-config/>
+    <!--
+        base-package：要扫描的包，包括其子包也会扫描，加了@component的bean都会被spring创建
+        如要扫描多个包，包名之间用逗号隔开即可
+    -->
+    <context:component-scan base-package="com.spring_02._03example"/>
+
+
+
+</beans>
