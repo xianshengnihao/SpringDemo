@@ -1,10 +1,11 @@
 package com.spring_02._04AOPbase.test;
 
-import com.spring_02._04AOPbase._01decorator.EmployeeDaoWrapper;
+import com.spring_02._04AOPbase.dao.IEmployeeDao;
 import com.spring_02._04AOPbase.domain.Employee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -18,7 +19,8 @@ public class DecoratorTest {
      * 见下面的@Qualifier
      */
     @Autowired
-    private EmployeeDaoWrapper employeeDao;
+    @Qualifier("employeeDaoWrapper")
+    private IEmployeeDao employeeDao;
     @Autowired Employee employee;
     @Test
     public void test(){
