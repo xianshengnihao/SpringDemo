@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+/**
+ * 装饰模式
+ * 静态代理
+ */
 @Component
 public class EmployeeDaoWrapper implements IEmployeeDao {
     @Autowired
@@ -14,6 +18,13 @@ public class EmployeeDaoWrapper implements IEmployeeDao {
     @Autowired
     @Qualifier("employeeDaoImpl")
     private IEmployeeDao iEmployeeDao;
+
+    /**
+     * 静态代理时该将该bean的创建放在了EmployeeDaoWrapper中，其他类无法使用因为用注解形式创建的bean，要体现该静态代理
+     * 需要用xml方式来体现，顾只能在此new EmployeeDaoImpl来体现，且需要EmployeeDaoImpl不被扫描到。
+     * IEmployeeDao iEmployeeDao = new EmployeeDaoImpl();
+     */
+//  IEmployeeDao iEmployeeDao = new EmployeeDaoImpl();
     @Override
     public void save(Employee employee) {
         try {
@@ -38,5 +49,10 @@ public class EmployeeDaoWrapper implements IEmployeeDao {
         }finally {
             System.out.println("关闭资源");
         }
+    }
+
+    @Override
+    public Employee get() {
+        return null;
     }
 }

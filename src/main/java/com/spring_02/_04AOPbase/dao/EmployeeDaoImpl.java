@@ -14,4 +14,10 @@ public class EmployeeDaoImpl implements IEmployeeDao {
     public void updata(Employee employee) {
         System.out.println("修改对象:"+employee);
     }
+
+    @Override
+    public Employee get() {
+        System.out.println("执行查询sql");
+        return new Employee();
+    }
 }
