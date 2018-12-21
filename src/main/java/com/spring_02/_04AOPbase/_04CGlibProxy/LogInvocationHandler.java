@@ -8,6 +8,8 @@ import java.lang.reflect.Method;
 /**
  * 使用cglib动态代理继承InvocationHandler接口是
  * org.springframework.cglib.proxy.InvocationHandler下的
+ * 对于要被动态代理的类如果没有实现任何接口，就不能使用JDK代理，只能使用继承的方式来完成
+ * spring默认使用cglib动态代理
  */
 @Component
 public class LogInvocationHandler implements InvocationHandler {

@@ -13,6 +13,8 @@ import java.lang.reflect.Method;
  * 继承InvocationHandler接口实现动态代理
  * 在代理类上调用接口的任何一个方法，这个方法的调用都会被InvocationHandler
  * 所拦截，其中的method就是这次调用的方法，其中arg就是这次调用方法传入的参数
+ * 对于要被动态代理的类如果没有实现任何接口，就不能使用JDK代理，只能使用继承的方式来完成
+ *  * spring默认使用cglib动态代理
  */
 @Component
 public class MyInvocationHandler implements InvocationHandler {
