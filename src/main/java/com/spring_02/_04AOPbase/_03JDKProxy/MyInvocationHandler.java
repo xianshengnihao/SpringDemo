@@ -1,6 +1,6 @@
 package com.spring_02._04AOPbase._03JDKProxy;
 
-import com.spring_02._04AOPbase.TransactionManager;
+import com.spring_02._04SrpingAop.TransactionManager;
 import com.spring_02._04AOPbase.dao.EmployeeDaoImpl;
 import com.spring_02._04AOPbase.dao.IEmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;

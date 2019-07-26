@@ -16,7 +16,7 @@ import javax.annotation.PreDestroy;
  * @Scope 该注解不写默认bean的创建为单例。
  * @PostConstruct 初始化方法注解
  * @PreDestroy 销毁方法注解，scope类型为prototype的时候没有销毁工作
- */
+           */
 @Component          //加了该注解spring在扫包的时候就会在容器中自动创建该bean
 @Scope("singleton")
 public class SomeBean {

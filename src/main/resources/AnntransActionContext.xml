@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+        <!--开启Autowired等注解-->
+        <context:annotation-config />
+        <!--自动扫包-->
+        <context:component-scan base-package="com.spring_03.annTransAction"/>
+        <!--开启解析AOP相关注解-->
+        <aop:aspectj-autoproxy />
+        <!--开启事务注解-->
+        <tx:annotation-driven transaction-manager="txManager"/>
+        <!--引入properties-->
+        <context:property-placeholder location="classpath:datasource/datasource.properties"/>
+         <!--配置datasource   使用德鲁伊配置数据源-->
+        <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+                <property name="driverClassName" value="${data.driver}"/>
+                <property name="username" value="${data.username}"/>
+                <property name="password" value="${data.password}"/>
+                <property name="url" value="${data.url}"/>
+        </bean>
+
+        <!-- 给spring的JDBC配置数据源-->
+        <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+                <property name="dataSource" ref="datasource"/>
+        </bean>
+        <!--配置事务管理器-->
+        <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="datasource"/>
+        </bean>
+
+<!--        <tx:advice id="txAdvice" transaction-manager="txManager">-->
+<!--                <tx:attributes>-->
+<!--                        &lt;!&ndash;配置需要开启事务的方法&ndash;&gt;-->
+<!--                        <tx:method name="transfer" />-->
+<!--                        <tx:method name="get*" read-only="true"/>-->
+<!--                        <tx:method name="list*" read-only="true"/>-->
+<!--                        <tx:method name="query*" read-only="true" />-->
+<!--                        <tx:method name="*" propagation="REQUIRED"/>-->
+<!--                </tx:attributes>-->
+<!--        </tx:advice>-->
+
+<!--        <aop:config>-->
+<!--                <aop:pointcut id="accountPc" expression="execution(* com.spring_03.transAction.Service.AccountService.*(..))"/>-->
+<!--                <aop:advisor advice-ref="txAdvice" pointcut-ref="accountPc"/>-->
+<!--        </aop:config>-->
+
+
+</beans>
+
+

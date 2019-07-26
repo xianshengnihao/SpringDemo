@@ -1,6 +1,6 @@
 package com.spring_02._04AOPbase._01decorator;
 
-import com.spring_02._04AOPbase.TransactionManager;
+import com.spring_02._04SrpingAop.TransactionManager;
 import com.spring_02._04AOPbase.dao.IEmployeeDao;
 import com.spring_02._04AOPbase.domain.Employee;
 import org.springframework.beans.factory.annotation.Autowired;

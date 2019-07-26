@@ -12,8 +12,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -25,7 +25,7 @@
     <properties>
         <file.encoding>UTF-8</file.encoding>
         <!--Srping依赖版本号-->
-        <spring.version>4.2.1.RELEASE</spring.version>
+        <spring.version>4.3.13.RELEASE</spring.version>
         <!--mysql驱动依赖版本号-->
         <mysql.version>5.1.29</mysql.version>
         <servlet.versiom>2.5</servlet.versiom>
@@ -33,6 +33,7 @@
         <slf4j.version>1.7.7</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
         <mybatis.version>3.4.0</mybatis.version>
+        <druid.version>1.1.2</druid.version>
     </properties>
     <dependencies>
         <dependency>
@@ -54,24 +55,29 @@
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <!--spring-tx:事务相关  spring-jdbc:jdbc连接数据库-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <!--spring-tx:事务相关  spring-jdbc:jdbc连接数据库-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -143,6 +149,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.30</version>
         </dependency>
+        <!--数据库连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
         <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -200,7 +212,6 @@
             <artifactId>SpringDemo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
 
 
     </dependencies>

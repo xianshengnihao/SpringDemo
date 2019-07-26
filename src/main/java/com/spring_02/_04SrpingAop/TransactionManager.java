@@ -1,8 +1,5 @@
-package com.spring_02._04AOPbase;
+package com.spring_02._04SrpingAop;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class TransactionManager {
     public void begin(){
         System.out.println("开启事务");
@@ -12,5 +9,8 @@ public class TransactionManager {
     }
     public void rollback(){
         System.out.println("回滚事务");
+    }
+    public void close(){
+        System.out.println("关闭资源");
     }
 }

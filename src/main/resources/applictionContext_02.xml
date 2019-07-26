@@ -9,5 +9,6 @@
         <import resource="classpath:/day2_appliction/Anntext-config.xml"/>
         <import resource="classpath:/day2_appliction/IOC-config.xml"/>
         <import resource="classpath:/day2_appliction/03_example-config.xml"/>
+        <import resource="classpath:day2_appliction/04_AopSpringAop-config.xml"/>
 
 </beans>
